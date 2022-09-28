@@ -55,7 +55,9 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
+static const char *firefoxcmd[]  = { "firefox", NULL };
+static const char *discordcmd[]  = { "discord", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
