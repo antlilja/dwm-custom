@@ -59,12 +59,17 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *firefoxcmd[]  = { "firefox", NULL };
 static const char *discordcmd[]  = { "discord", NULL };
 
+static const char *shutdowncmd[]  = { "shutdown", "now", NULL };
+static const char *rebootcmd[]  = { "reboot", NULL };
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,             		XK_BackSpace, spawn,       {.v = firefoxcmd } },
 	{ MODKEY,             		XK_d, 	   spawn,          {.v = discordcmd } },
 	{ MODKEY,             		XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_s, 	   spawn,          {.v = shutdowncmd } },
+	{ MODKEY|ShiftMask,             XK_r, 	   spawn,          {.v = rebootcmd } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
